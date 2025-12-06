@@ -8,7 +8,7 @@ import torch.optim as optim
 import torch.nn.functional as F
 train_data=pd.read_csv("train.csv")
 
-#{{{{{{{{{{ Preparation des données de validations :
+# Preparation des données de validations :
 validation_data=pd.read_csv("test.csv")
    #Comme il a pas de label on l'utilisera que apres avoir fini toutes taches de training du modele
 
@@ -16,7 +16,6 @@ validation_tensor=torch.tensor(validation_data.values, dtype=torch.float32)/255.
 validation_dataset=TensorDataset(validation_tensor)
 validation_loader=DataLoader(validation_dataset, batch_size=32,shuffle=False)
 
-#}}}}}}}}}}
 # Les données Pandas seront convertis en Tensor pytorch
 train_tensor_x= torch.tensor(train_data.drop(columns='label',axis=1).values, dtype=torch.float32)/255.0
 train_tensor_y=torch.tensor(train_data['label'].values, dtype=torch.long)
