@@ -28,7 +28,7 @@ Construire un pipeline simple mais crédible pour :
 └── requirements.txt
 ```
 
-Les fichiers CSV Kaggle ne sont pas versionnés. Place-les localement dans `data/`.
+Les fichiers CSV Kaggle ne sont pas versionnés. Ils doivent être placés localement dans `data/`.
 
 ## Installation
 
@@ -40,7 +40,7 @@ pip install -r requirements.txt
 
 ## Données
 
-Télécharger les données du challenge Kaggle Digit Recognizer, puis placer les fichiers ainsi :
+Après téléchargement des données du challenge Kaggle Digit Recognizer, les fichiers doivent être organisés ainsi :
 
 ```text
 data/train.csv
