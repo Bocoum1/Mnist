@@ -90,7 +90,3 @@ python -m unittest discover -s tests
 ```
 
 Les tests ne nécessitent pas les CSV complets. Les tests PyTorch sont ignorés automatiquement si PyTorch n'est pas installé.
-
-## Notes de crédibilité
-
-Ce dépôt ne prétend pas à un score Kaggle sans journal d'entraînement vérifiable. Les résultats doivent être reportés dans le README uniquement après exécution complète avec la configuration utilisée : seed, nombre d'epochs, taille du split validation, accuracy et éventuel score Kaggle.
