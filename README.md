@@ -11,7 +11,7 @@ de generalisation, pas de rechercher un record sur MNIST.
 
 ## Resultats mesures
 
-Experience CPU du 15 octobre 2026. Test interne de 8 400 images, tenu a
+Experience CPU. Test interne de 8 400 images, tenu a
 l'ecart de la selection dans ce protocole. Moyenne et ecart-type sur les
 graines 17, 42 et 73 ; l'ecart-type est exprime en points de pourcentage.
 
