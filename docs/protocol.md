@@ -4,10 +4,9 @@
 
 Sur les chiffres manuscrits de Kaggle Digit Recognizer, dans quelle mesure
 la structure convolutionnelle ameliore-t-elle la classification par rapport
-a un modele lineaire et a un MLP, pour un meme budget d'epoques ?
+a un modele lineaire et a un MLP, pour un meme nombre d'epoques ?
 
 Hypothese : le CNN exploite mieux la structure spatiale que les images aplaties.
-Cette comparaison ne mesure pas le meilleur score atteignable par chaque famille.
 
 ## Protocole fixe avant l'evaluation
 
