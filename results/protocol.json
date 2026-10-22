@@ -1,0 +1,39 @@
+{
+  "dataset_sha256": "b35cc952c291f03d995f48721373e69454f689e299d724bd9a5927bdabddfeed",
+  "code_sha256": {
+    "experiment.py": "4136ab4c95f7ccc5476d336805e4c16e5ff18dc8b094b773b44f0ab1748eb082",
+    "mnist_cnn.py": "7d29d0e5ba1ac46c9b351fbd604d2e2f24e656fa164dc9cbb1cf1dc62ee5dc57"
+  },
+  "split_seed": 20261015,
+  "sizes": {
+    "train": 25200,
+    "validation": 8400,
+    "test": 8400
+  },
+  "seeds": [
+    17,
+    42,
+    73
+  ],
+  "models": [
+    "linear",
+    "mlp",
+    "cnn"
+  ],
+  "epochs": 8,
+  "batch_size": 128,
+  "learning_rate": 0.001,
+  "threads": 2,
+  "device": "cpu",
+  "optimizer": "Adam",
+  "checkpoint_rule": "minimum validation loss",
+  "selection_rule": "mean validation accuracy, then mean validation loss",
+  "versions": {
+    "python": "3.12.3",
+    "torch": "2.8.0+cu128",
+    "numpy": "2.3.1",
+    "pandas": "2.3.1",
+    "sklearn": "1.7.1"
+  },
+  "selected_model": "cnn"
+}
