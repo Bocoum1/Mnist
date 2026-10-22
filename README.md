@@ -27,8 +27,7 @@ de parametres proche, mais un cout CPU plus eleve. Ce n'est pas une preuve
 de superiorite pour toutes les images ou tous les budgets d'optimisation.
 
 [Metriques par execution](results/test-metrics.csv) |
-[Synthese](results/test-summary.csv) |
-[Protocole et limites](docs/protocol.md)
+[Synthese](results/test-summary.csv)
 
 ## Protocole en bref
 
@@ -39,11 +38,9 @@ de superiorite pour toutes les images ou tous les budgets d'optimisation.
 - Evaluation du test dans une commande distincte, apres enregistrement de la selection.
 - Sources, empreinte des donnees, reglages et versions conserves dans [protocol.json](results/protocol.json).
 
-
-
 ## Reproduire
 
-experience realisee avec Python 3.12.3.
+Experience realisee avec Python 3.12.3.
 
 ```bash
 python -m venv .venv
@@ -53,6 +50,7 @@ pip install -r requirements-study.txt
 
 Telecharger les donnees depuis [Kaggle Digit Recognizer](https://www.kaggle.com/competitions/digit-recognizer/data).
 Placer le fichier etiquete dans `data/train.csv`. Le fichier `data/test.csv`
+Kaggle n'a pas d'etiquettes et sert aux soumissions.
 
 ```bash
 python -m src.experiment train --output artifacts/study
@@ -77,5 +75,6 @@ Ces images sont les douze premieres erreurs du test, pour la premiere graine
 prevue, sans selection visuelle. La [matrice de confusion](results/confusion.png)
 complete cette inspection. Une erreur peut concerner un trace inhabituel ou
 une forme proche d'un autre chiffre ; les images seules n'en prouvent pas la cause.
-pas une validation externe sur des images nouvelles. Aucun score de leaderboard
+
+Ces resultats ne constituent pas une validation externe sur des images nouvelles. Aucun score de leaderboard
 Kaggle ni aptitude a la production n'est revendique.
