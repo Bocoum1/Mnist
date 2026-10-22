@@ -39,13 +39,11 @@ de superiorite pour toutes les images ou tous les budgets d'optimisation.
 - Evaluation du test dans une commande distincte, apres enregistrement de la selection.
 - Sources, empreinte des donnees, reglages et versions conserves dans [protocol.json](results/protocol.json).
 
-Les scripts comportent des commentaires en francais. Le CNN et les points
-d'entree precedents restent disponibles ; l'etude comparative est ajoutee
-dans [src/experiment.py](src/experiment.py).
+
 
 ## Reproduire
 
-Python 3.11 ou plus recent ; experience realisee avec Python 3.12.3.
+experience realisee avec Python 3.12.3.
 
 ```bash
 python -m venv .venv
@@ -55,8 +53,6 @@ pip install -r requirements-study.txt
 
 Telecharger les donnees depuis [Kaggle Digit Recognizer](https://www.kaggle.com/competitions/digit-recognizer/data).
 Placer le fichier etiquete dans `data/train.csv`. Le fichier `data/test.csv`
-Kaggle est non etiquete et n'est utile que pour une soumission optionnelle.
-Aucun CSV de donnees ni poids de modele n'est versionne.
 
 ```bash
 python -m src.experiment train --output artifacts/study
@@ -66,10 +62,7 @@ python -m unittest discover -s tests
 
 Les fichiers produits restent dans `artifacts/study/`. `results/` contient
 les tableaux et figures de l'experience presentee. Les versions principales
-sont fixees dans `requirements-study.txt` ; le materiel et les dependances
-transitives peuvent encore influencer la reproductibilite.
-
-Pour retrouver le pipeline simple anterieur :
+sont fixees dans `requirements-study.txt` ; le materiel et certaines dependances peuvent encore influencer la reproductibilite.
 
 ```bash
 python mnist.py --epochs 3 --cpu
@@ -84,11 +77,5 @@ Ces images sont les douze premieres erreurs du test, pour la premiere graine
 prevue, sans selection visuelle. La [matrice de confusion](results/confusion.png)
 complete cette inspection. Une erreur peut concerner un trace inhabituel ou
 une forme proche d'un autre chiffre ; les images seules n'en prouvent pas la cause.
-
-## Ce que cette etude ne demontre pas
-
-Trois graines ne fournissent pas un intervalle de confiance sur une population.
-Le modele lineaire est entraine a budget fixe, pas jusqu'a convergence garantie.
-MNIST avait deja servi dans des travaux precedents : ce test interne n'est
 pas une validation externe sur des images nouvelles. Aucun score de leaderboard
 Kaggle ni aptitude a la production n'est revendique.
